@@ -1,7 +1,5 @@
 Attendance Management System – FastAPI + MongoDB
 
-This project is a simple attendance management backend built with FastAPI and MongoDB. It supports CRUD operations for departments, courses, students, users, and provides APIs for marking and viewing attendance records.
-
 ## Features
 
 - FastAPI async backend with MongoDB (Motor driver).
