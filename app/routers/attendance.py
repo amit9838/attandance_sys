@@ -52,7 +52,6 @@ async def mark_attendance(attendance: AttendanceCreate):
     return {**created, "_id": str(created["_id"])}
 
 
-
 @router.get("/student/{student_id}", response_model=list[AttendanceResponse])
 async def get_student_attendance(student_id: str):
     """Get all attendance records for a student"""
