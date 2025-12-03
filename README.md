@@ -133,64 +133,15 @@ Attendance:
 - DELETE /api/attendance/{attendance_id}
   - Delete an attendance record.
 
-## Example Requests
-
-1) Create Department
-
-- POST /api/departments
-- Body:
-  - {
-      "department_name": "Computer Science"
-    }
-
-2) Create Course
-
-- POST /api/courses
-- Body:
-  - {
-      "course_name": "Python 101",
-      "department_id": "<department_object_id>",
-      "semester": 1,
-      "class": "B1",
-      "lecture_hours": 40
-    }
-
-3) Add Student
-
-- POST /api/students
-- Body:
-  - {
-      "full_name": "John Doe",
-      "department_id": "<department_object_id>",
-      "class": "B1"
-    }
-
-4) Register User
-
-- POST /api/users/register
-- Body:
-  - {
-      "full_name": "Jane Smith",
-      "username": "jane_smith",
-      "email": "jane@example.com",
-      "password": "secret",
-      "type": "admin"
-    }
-
-5) Mark Attendance
-
-- POST /api/attendance
-- Body:
-  - {
-      "student_id": "<student_object_id>",
-      "course_id": "<course_object_id>",
-      "present": true
-    }
-
-6) Get Course Attendance Stats
-
-- GET /api/attendance/stats/<course_object_id>
-
+| Method | Endpoint                                 | Purpose                            |
+| ------ | ---------------------------------------- | ---------------------------------- |
+| POST   | /api/attendance                          | Mark attendance for student        |
+| GET    | /api/attendance/{student_id}/{course_id} | Get today's attendance             |
+| GET    | /api/attendance/student/{student_id}     | Get all student attendance records |
+| GET    | /api/attendance/course/{course_id}       | Get all course attendance records  |
+| GET    | /api/attendance/stats/{course_id}        | Get attendance statistics          |
+| PUT    | /api/attendance/{attendance_id}          | Update attendance                  |
+| DELETE | /api/attendance/{attendance_id}          | Delete attendance                  |
 
 ### Docs Screenshot
 ![alt text](https://github.com/amit9838/attandance_sys/blob/a528b1996d2b4a7a44bd082100fbcfb9aa4569b5/docs.png)
