@@ -191,3 +191,6 @@ Attendance:
 
 - GET /api/attendance/stats/<course_object_id>
 
+
+### Docs Screenshot
+![alt text](https://github.com/amit9838/attandance_sys/blob/a528b1996d2b4a7a44bd082100fbcfb9aa4569b5/docs.png)
