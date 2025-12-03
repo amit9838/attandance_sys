@@ -7,7 +7,7 @@ Attendance Management System – FastAPI + MongoDB
   - Department
   - Course
   - Student
-  - User (with basic password hashing)
+  - User (with password hashing)
 - Attendance APIs:
   - Mark attendance for a student in a course.
   - Get today’s attendance for a student in a course.
@@ -22,7 +22,6 @@ Attendance Management System – FastAPI + MongoDB
 - Uvicorn
 - MongoDB (Motor / PyMongo)
 - Pydantic v2
-- Docker (for running MongoDB locally)
 
 ## Project Structure
 
@@ -34,39 +33,16 @@ Attendance Management System – FastAPI + MongoDB
   - students.py – CRUD for students.
   - users.py – CRUD for users and registration.
   - attendance.py – APIs for marking and checking attendance.
-- .env – Environment variables (MongoDB URL, DB name, port).
 - requirements.txt – Python dependencies.
 
 ## Setup Instructions
 
-1) Clone and create environment
-
-- Clone the repository (or copy the code files into a folder).
-- Create and activate a virtual environment.
-
-Example:
-
-- python -m venv venv
-- source venv/bin/activate  (Linux/macOS)
-- venv\Scripts\activate     (Windows)
-
-2) Install dependencies
-
-- pip install -r requirements.txt
-
-3) Run MongoDB (using Docker)
-
-- docker run -d -p 27017:27017 --name mongodb mongo:latest
-
-4) Configure environment
-
-Create a .env file in the project root:
-
+DB config
 - MONGODB_URL=mongodb://localhost:27017
 - DATABASE_NAME=attendance_db
 - API_PORT=8000
 
-5) Run FastAPI server
+1) Run FastAPI server
 
 - uvicorn main:app --reload --port 8000
 
